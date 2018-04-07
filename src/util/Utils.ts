@@ -1,5 +1,5 @@
-import {EntityParamOptions} from "../options/EntityParamOptions";
-import {getConnectionManager} from "typeorm";
+import { EntityParamOptions } from "../options/EntityParamOptions";
+import { getConnectionManager } from "typeorm";
 
 /**
  * @internal
@@ -18,5 +18,5 @@ export function entityTransform(value: any, target: any, isArray: boolean, optio
             return repository.findOne({ [options.property]: value });
         }
     }
-    return repository.findOneById(value);
+    return repository.findOne(value);
 }
